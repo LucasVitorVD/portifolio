@@ -1,0 +1,14 @@
+- Fontes:
+  - Jersey 25
+  - Bebas Neue
+
+- Cores:
+  - primary: #d1cdb7
+  - secondary: #454138
+
+- Tecnologias e ferramentas
+  - Next JS
+  - Tailwind
+  - ShadCN
+  - Typescript
+  - CMS (?)
