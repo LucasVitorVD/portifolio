@@ -67,3 +67,7 @@
     @apply bg-background text-foreground;
   }
 }
+
+.btn-shadow {
+  box-shadow: 5px 5px 0px 0px var(--secondary);
+}
