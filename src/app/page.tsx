@@ -1,7 +1,9 @@
+import Hero from "@/components/sections/hero/Hero";
+
 export default function Home() {
   return (
     <main className="flex-1">
-      <h1>Hello world!</h1>
+      <Hero />
     </main>
   );
 }

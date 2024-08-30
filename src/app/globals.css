@@ -68,6 +68,20 @@
   }
 }
 
-.btn-shadow {
-  box-shadow: 5px 5px 0px 0px var(--secondary);
+@layer utilities {
+  .hollow-text {
+    -webkit-text-stroke: 2px black;
+    color: transparent;
+    text-shadow:
+       3px 3px 0 var(--primary),
+     -1px -1px 0 var(--primary),  
+      1px -1px 0 var(--primary),
+      -1px 1px 0 var(--primary),
+       1px 1px 0 var(--primary);
+  }
+
+  .custom-bg {
+    @apply bg-[length:10px_10px];
+    background-image: linear-gradient(to right, #ccc8b1 1px, rgba(204, 200, 177, 0) 1px), linear-gradient(to bottom, #ccc8b1 1px, rgba(204, 200, 177, 0) 1px);
+  }
 }
