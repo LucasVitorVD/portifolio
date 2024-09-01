@@ -6,13 +6,13 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="flex items-center justify-center h-full py-20 lg:py-0">
+    <section className="flex items-center justify-center min-h-screen py-20 lg:py-0">
       <div className="container flex flex-col items-center gap-12 lg:flex-row">
         <div>
           <p className="text-md md:text-2xl">Desenvolvedor Web</p>
           <div className="text-[2.75rem] leading-tight font-title lg:leading-[9rem] md:text-8xl lg:text-[9rem]">
             <h1>Desenvolvedor</h1>
-            <p className="md:hollow-text lg:z-50 lg:relative lg:left-32">
+            <p className="md:hollow-text lg:z-10 lg:relative lg:translate-x-32">
               Web Full-Stack
             </p>
           </div>

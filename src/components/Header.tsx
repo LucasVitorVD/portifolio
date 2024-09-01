@@ -6,7 +6,7 @@ import NavLinkList from "./NavLinkList";
 
 export default function Header() {
   return (
-    <header className="fixed top-0 z-50 border-b-2 border-secondary bg-primary w-full py-4">
+    <header className="fixed top-0 z-40 border-b-2 border-secondary bg-primary w-full py-4">
       <div className="container flex items-center justify-between">
         <div>
           <h1 className="text-2xl text-secondary font-bold uppercase">Lucas</h1>

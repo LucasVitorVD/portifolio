@@ -26,7 +26,7 @@ export default function Aside() {
   }
 
   return (
-    <aside className="hidden lg:flex flex-col justify-between w-16 border-r-2 border-secondary">
+    <aside className="hidden lg:flex flex-col justify-between w-16 border-r-2 border-secondary bg-primary fixed left-0 z-50 h-full">
       <button className="py-6 border-b-2 border-secondary" onClick={() => handleChangePosition("decrease")}>
         <MoveUp className="mx-auto text-secondary size-5" />
       </button>
