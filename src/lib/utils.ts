@@ -12,14 +12,14 @@ export const navLinks = [
   },
   {
     label: "Projetos",
-    href: "#projetos"
+    href: "#projects"
   },
   {
     label: "Tecnologias",
-    href: "#tech"
+    href: "#techs"
   },
   {
     label: "Sobre mim",
-    href: "#sobre"
+    href: "#about"
   },
 ]

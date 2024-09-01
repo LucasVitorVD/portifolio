@@ -2,7 +2,7 @@ import ProjectsCarousel from "./ProjectsCarousel";
 
 export default function Projects() {
   return (
-    <section className="pb-20">
+    <section className="pb-20" id="projects">
       <div className="container flex flex-col">
         <div className="leading-tight lg:leading-[9rem]">
           <p className="text-md md:text-2xl">Meus últimos</p>
