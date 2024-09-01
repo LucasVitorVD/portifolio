@@ -21,10 +21,10 @@ export default function Hero() {
           </p>
           <div className="flex flex-wrap items-center gap-8 mt-12">
             <Button asChild>
-              <a href="#projetos">Veja meus últimos projetos</a>
+              <a href="#projects">Veja meus últimos projetos</a>
             </Button>
             <a
-              href="#sobre"
+              href="#about"
               className="text-secondary uppercase underline underline-offset-4"
             >
               Sobre mim
