@@ -9,20 +9,26 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay"
 import ProjectCard from "./ProjectCard";
+import { HighlightProject } from "@/types/page-info";
 
-export default function ProjectsCarousel() {
+interface Props {
+  projects: HighlightProject[]
+}
+
+export default function ProjectsCarousel({ projects }: Props) {
   return (
     <Carousel
       opts={{
         align: "center",
+        loop: true
       }}
       className="w-full max-w-xs md:max-w-lg lg:max-w-full mx-auto"
     >
       <CarouselContent>
-        {Array.from({ length: 10 }).map((_, index) => (
+        {projects.map((project, index) => (
           <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
             <div className="p-1">
-              <ProjectCard />
+              <ProjectCard projectData={project} />
             </div>
           </CarouselItem>
         ))}

@@ -45,7 +45,7 @@ export default function Hero({ homeInfo }: Props) {
               alt="profile image"
               width={450}
               height={400}
-              className="grayscale border border-black"
+              className="grayscale border border-black transition-all hover:filter-none"
             />
             <div className="hidden md:flex flex-col gap-4 justify-end">
               {homeInfo.socials.map((social) => (

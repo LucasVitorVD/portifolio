@@ -26,6 +26,24 @@ const query = `
           url
           iconSvg
         }
+        highlightProjects {
+          slug
+          thumbnail {
+            url
+          }
+          title
+          shortDescription
+          frontendTecnology {
+            name
+            iconSvg
+          }
+          backendTecnology {
+            name
+            iconSvg
+          }
+          githubUrl
+          liveProjectUrl
+        }
       }
     }
   `;
@@ -39,7 +57,7 @@ export default async function Home() {
   return (
     <main className="flex flex-col flex-1">
       <Hero homeInfo={pageData} />
-      <Projects />
+      <Projects highlightProjects={pageData.highlightProjects} />
       <Techs
         frontEndTechs={pageData.frontendTecnology}
         backEndTechs={pageData.backendTecnology}

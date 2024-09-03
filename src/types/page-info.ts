@@ -6,6 +6,20 @@ export interface Social {
   iconSvg: string
 }
 
+export interface HighlightProject {
+  slug: string
+  thumbnail: {
+    url: string
+  }
+  title: string
+  shortDescription: string
+  description: string
+  frontendTecnology: Tech[]
+  backendTecnology: Tech[]
+  githubUrl: string
+  liveProjectUrl: string
+}
+
 export interface HomePageInfo {
   introduction: {
     raw: RichTextContent
@@ -15,7 +29,8 @@ export interface HomePageInfo {
   profilePicture: {
     url: string
   }
-  socials: Social[]
+  socials: Social[],
+  highlightProjects: HighlightProject[]
 }
 
 export interface HomePageData {

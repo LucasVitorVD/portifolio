@@ -51,7 +51,7 @@ export default function About() {
               alt="profile image"
               width={450}
               height={400}
-              className="grayscale border border-black"
+              className="grayscale border border-black transition-all hover:filter-none"
             />
           </figure>
 
