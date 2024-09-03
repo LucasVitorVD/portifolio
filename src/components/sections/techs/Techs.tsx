@@ -1,27 +1,13 @@
 import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card";
+import { Tech } from "@/types/projects";
 import { BadgeCheck } from "lucide-react";
 
-const frontEndTechs = [
-  "HTML",
-  "CSS",
-  "Javascript",
-  "Typescript",
-  "React",
-  "Next JS",
-  "Tailwind",
-  "ShadcnUI",
-];
+interface Props {
+  frontEndTechs: Tech[],
+  backEndTechs: Tech[]
+}
 
-const backEndTechs = [
-  "Node JS",
-  "Java",
-  "Spring-Boot",
-  "MySQL",
-  "JUnit",
-  "Git",
-];
-
-export default function Techs() {
+export default function Techs({ frontEndTechs, backEndTechs }: Props) {
   return (
     <section className="pb-20" id="techs">
       <div className="container flex flex-col space-y-10">
@@ -41,13 +27,13 @@ export default function Techs() {
             </CardHeader>
             <CardContent className="flex justify-center">
               <ul className="grid grid-cols-2 gap-x-20 gap-y-6 list-outside">
-                {frontEndTechs.map((tech) => (
+                {frontEndTechs && frontEndTechs.map((tech) => (
                   <li
-                    key={tech}
+                    key={tech.name}
                     className="flex items-center gap-3 text-lg md:text-xl"
                   >
                     <BadgeCheck className="bg-primary text-secondary rounded-full" />
-                    {tech}
+                    {tech.name}
                   </li>
                 ))}
               </ul>
@@ -62,13 +48,13 @@ export default function Techs() {
             </CardHeader>
             <CardContent className="flex justify-center">
               <ul className="grid grid-cols-2 gap-x-20 gap-y-6 list-outside">
-                {backEndTechs.map((tech) => (
+                {backEndTechs && backEndTechs.map((tech) => (
                   <li
-                    key={tech}
+                    key={tech.name}
                     className="flex items-center gap-3 text-lg md:text-xl"
                   >
                     <BadgeCheck className="bg-primary text-secondary rounded-full" />
-                    {tech}
+                    {tech.name}
                   </li>
                 ))}
               </ul>

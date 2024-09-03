@@ -12,3 +12,11 @@
   - ShadCN
   - Typescript
   - CMS (?)
+
+- To-do
+  - Animações
+  - Arrumar o aside
+  - Autoplay no carrosel
+  - configurar o CMS e obter os dados.
+  - dark mode
+  - adicionar as bordas nos links do header 

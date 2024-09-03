@@ -1,10 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { Linkedin, Github } from "lucide-react";
-import ProfilePhoto from "../../../../public/photos/IMG-20240127-WA0082.jpg"
+import ProfilePhoto from "../../../../public/photos/IMG-20240127-WA0082.jpg";
 import Link from "next/link";
 import Image from "next/image";
+import { HomePageInfo } from "@/types/page-info";
+import RichText from "@/components/rich-text";
+import CMSIcon from "@/components/cms-icon";
 
-export default function Hero() {
+interface Props {
+  homeInfo: HomePageInfo;
+}
+
+export default function Hero({ homeInfo }: Props) {
   return (
     <section className="flex items-center justify-center min-h-screen py-20 lg:py-0">
       <div className="container flex flex-col items-center gap-12 lg:flex-row">
@@ -16,9 +23,9 @@ export default function Hero() {
               Web Full-Stack
             </p>
           </div>
-          <p className="text-secondary mt-6 md:w-[600px] text-wrap">
-            Sou um desenvolvedor <strong>full-stack</strong>, dedicado a aprender e crescer na área da tecnologia, com foco em criar soluções inovadoras que proporcionem experiências incríveis aos usuários!
-          </p>
+          <div className="text-secondary mt-6 md:w-[600px] text-wrap">
+            <RichText content={homeInfo.introduction.raw} />
+          </div>
           <div className="flex flex-wrap items-center gap-8 mt-12">
             <Button asChild>
               <a href="#projects">Veja meus últimos projetos</a>
@@ -34,30 +41,23 @@ export default function Hero() {
         <figure className="flex flex-col items-center gap-8">
           <div className="flex gap-2">
             <Image
-              src={ProfilePhoto}
+              src={homeInfo.profilePicture.url}
               alt="profile image"
               width={450}
               height={400}
               className="grayscale border border-black"
             />
             <div className="hidden md:flex flex-col gap-4 justify-end">
-              <Link
-                href="https://www.linkedin.com/in/lucasvvicente/"
-                target="_blank"
-                rel="external"
-                className="bg-secondary text-primary p-2 rounded-full"
-              >
-                <Linkedin />
-              </Link>
-
-              <Link
-                href="https://github.com/LucasVitorVD"
-                target="_blank"
-                rel="external"
-                className="bg-secondary text-primary p-2 rounded-full"
-              >
-                <Github />
-              </Link>
+              {homeInfo.socials.map((social) => (
+                <Link
+                  href={social.url}
+                  target="_blank"
+                  rel="external"
+                  className="bg-secondary text-primary p-2 rounded-full"
+                >
+                  <CMSIcon svgContent={social.iconSvg} />
+                </Link>
+              ))}
             </div>
           </div>
           <figcaption>
