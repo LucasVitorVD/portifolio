@@ -21,12 +21,12 @@ export default function Techs({ frontEndTechs, backEndTechs }: Props) {
         <div className="grid gap-10 lg:grid-cols-2">
           <Card className="bg-secondary border-2 text-primary rounded-none shadow-none transition-all  hover:shadow-3xl hover:-translate-x-2 hover:-translate-y-2">
             <CardHeader>
-              <CardTitle className="text-2xl text-center lg:text-3xl">
+              <CardTitle className="text-xl text-center md:text-3xl">
                 Desenvolvimento Front-End
               </CardTitle>
             </CardHeader>
             <CardContent className="flex justify-center">
-              <ul className="grid grid-cols-2 gap-x-20 gap-y-6 list-outside">
+              <ul className="grid grid-cols-2 gap-x-10 gap-y-6 md:gap-x-20">
                 {frontEndTechs && frontEndTechs.map((tech) => (
                   <li
                     key={tech.name}
@@ -42,7 +42,7 @@ export default function Techs({ frontEndTechs, backEndTechs }: Props) {
 
           <Card className="bg-secondary border-2 text-primary rounded-none shadow-none transition-all  hover:shadow-3xl hover:-translate-x-2 hover:-translate-y-2">
             <CardHeader>
-              <CardTitle className="text-2xl text-center lg:text-3xl">
+              <CardTitle className="text-xl text-center md:text-3xl">
                 Desenvolvimento Back-End
               </CardTitle>
             </CardHeader>

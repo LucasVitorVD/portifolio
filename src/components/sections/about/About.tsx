@@ -44,7 +44,7 @@ export default function About() {
           </h2>
         </div>
 
-        <div className="flex gap-10">
+        <div className="flex flex-col items-center gap-10 lg:flex-row lg:items-start">
           <figure>
             <Image
               src={ProfilePhoto}
