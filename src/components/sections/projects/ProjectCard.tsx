@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { HighlightProject } from "@/types/page-info";
+import type { HighlightProject } from "@/types/projects";
 import Link from "next/link";
 
 interface Props {

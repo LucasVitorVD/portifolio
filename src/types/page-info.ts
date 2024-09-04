@@ -1,24 +1,8 @@
-import { Tech } from "./projects"
+import type { About } from "./about"
+import type { HighlightProject } from "./projects"
+import type { Social } from "./social"
+import type { Tech } from "./tech"
 import type { RichTextContent } from "@graphcms/rich-text-types"
-
-export interface Social {
-  url: string,
-  iconSvg: string
-}
-
-export interface HighlightProject {
-  slug: string
-  thumbnail: {
-    url: string
-  }
-  title: string
-  shortDescription: string
-  description: string
-  frontendTecnology: Tech[]
-  backendTecnology: Tech[]
-  githubUrl: string
-  liveProjectUrl: string
-}
 
 export interface HomePageInfo {
   introduction: {
@@ -31,6 +15,7 @@ export interface HomePageInfo {
   }
   socials: Social[],
   highlightProjects: HighlightProject[]
+  about: About
 }
 
 export interface HomePageData {

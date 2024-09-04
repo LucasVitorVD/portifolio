@@ -14,7 +14,7 @@ export default function Header() {
         <nav className="hidden lg:flex flex-1 items-center justify-end gap-12">
           <NavLinkList />
           <Button asChild>
-            <Link href="#" className={buttonVariants({ variant: "default" })}>
+            <Link href="mailto:vitorvicentelucas@gmail.com" className={buttonVariants({ variant: "default" })}>
               Entrar em contato
             </Link>
           </Button>

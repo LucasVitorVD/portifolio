@@ -44,6 +44,22 @@ const query = `
           githubUrl
           liveProjectUrl
         }
+        about {
+          profileImage {
+            url
+          }
+          text {
+            raw
+          }
+          educations {
+            institutionName
+            institutionIcon
+          }
+          languages {
+            languageIcon
+            name
+          }
+        }
       }
     }
   `;
@@ -62,7 +78,7 @@ export default async function Home() {
         frontEndTechs={pageData.frontendTecnology}
         backEndTechs={pageData.backendTecnology}
       />
-      <About />
+      <About aboutInfo={pageData.about} />
     </main>
   );
 }

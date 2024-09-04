@@ -1,4 +1,4 @@
-import { HighlightProject } from "@/types/page-info";
+import type { HighlightProject } from "@/types/projects";
 import ProjectsCarousel from "./ProjectsCarousel";
 
 interface Props {
