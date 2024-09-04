@@ -1,5 +1,5 @@
 import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card";
-import { Tech } from "@/types/projects";
+import { Tech } from "@/types/tech";
 import { BadgeCheck } from "lucide-react";
 
 interface Props {
