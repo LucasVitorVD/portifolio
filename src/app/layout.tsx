@@ -1,21 +1,21 @@
 import type { Metadata } from "next";
 import { Bebas_Neue, Roboto_Slab } from "next/font/google";
 import "./globals.css";
-import { cn } from "@/lib/utils";
 import Aside from "@/components/Aside";
 import Header from "@/components/Header";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const bebasNeue = Bebas_Neue({
-  subsets: ["latin"], 
+  subsets: ["latin"],
   weight: "400",
-  variable: "--font-title"
-})
+  variable: "--font-title",
+});
 
 const robotoSlab = Roboto_Slab({
-  subsets: ["latin"], 
+  subsets: ["latin"],
   weight: ["300", "400", "500", "600"],
-  variable: "--font-body"
-})
+  variable: "--font-body",
+});
 
 export const metadata: Metadata = {
   title: "Portifólio",
@@ -29,15 +29,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={`${bebasNeue.variable} ${robotoSlab.variable} font-body`}>
-        <div className="flex min-h-screen bg-primary custom-bg">
-          <Aside />
+      <body
+        className={`${bebasNeue.variable} ${robotoSlab.variable} font-body`}
+      >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="flex min-h-screen bg-primary custom-bg">
+            <Aside />
 
-          <div className="flex flex-col flex-1">
-            <Header />
-            {children}
+            <div className="flex flex-col flex-1">
+              <Header />
+              {children}
+            </div>
           </div>
-        </div>
+        </ThemeProvider>
       </body>
     </html>
   );

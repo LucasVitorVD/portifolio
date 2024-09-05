@@ -15,10 +15,10 @@ export default function ProjectCard({ projectData }: Props) {
       >
         <CardContent className="aspect-square p-0">
           <div className="flex flex-col items-start justify-end gap-4 size-full pb-3 bg-black/50 backdrop-grayscale container transition-all text-white group-hover:bg-transparent group-hover:backdrop-grayscale-0">
-            <p className="text-2xl font-bold group-hover:underline">
+            <p className="text-lg font-bold group-hover:underline md:text-xl lg:text-2xl">
               {projectData.title}
             </p>
-            <p className="text-sm">{projectData.shortDescription}</p>
+            <p className="text-xs line-clamp-3 md:text-sm lg:line-clamp-none">{projectData.shortDescription}</p>
           </div>
         </CardContent>
       </Card>

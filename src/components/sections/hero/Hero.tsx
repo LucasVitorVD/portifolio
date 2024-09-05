@@ -61,7 +61,7 @@ export default function Hero({ homeInfo }: Props) {
             </div>
           </div>
           <figcaption>
-            <p className="text-secondary uppercase font-bold italic">
+            <p className="text-secondary uppercase font-bold italic text-sm md:text-base">
               Prazer em te conhecer! <br />
               Como posso ajudar?
             </p>

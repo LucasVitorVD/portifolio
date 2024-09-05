@@ -17,8 +17,8 @@ export default function About({ aboutInfo }: Props) {
     <section className="pb-20" id="about">
       <div className="container flex flex-col space-y-10">
         <div className="leading-tight lg:leading-[9rem]">
-          <p className="text-md md:text-2xl">Conheça mais</p>
-          <h2 className="text-[2.75rem] md:hollow-text md:text-8xl lg:text-[9rem]">
+          <p className="text-md md:text-xl">Conheça mais</p>
+          <h2 className="text-3xl md:hollow-text md:text-8xl lg:text-[9rem]">
             SOBRE MIM
           </h2>
         </div>
@@ -35,7 +35,7 @@ export default function About({ aboutInfo }: Props) {
           </figure>
 
           <div className="flex flex-col flex-1 gap-6">
-            <div className="space-y-4">
+            <div className="space-y-4 text-justify leading-relaxed hyphens-auto">
               <RichText content={aboutInfo.text.raw} />
             </div>
 

@@ -27,7 +27,7 @@ export default function ProjectsCarousel({ projects }: Props) {
           delay: 3000,
         }),
       ]}
-      className="w-full max-w-xs md:max-w-lg lg:max-w-full mx-auto"
+      className="w-full min-[320px]:max-w-64 min-[375px]:max-w-xs md:max-w-xl lg:max-w-full mx-auto"
     >
       <CarouselContent>
         {projects.map((project, index) => (
